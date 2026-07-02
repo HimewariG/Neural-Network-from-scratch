@@ -10,7 +10,6 @@ w2 = np.random.rand(3,2)
 w3 = np.random.rand(2,3)
 nb = int(input("Please enter the nuber of data point "))
 train_rate = float(input("Please enter the training rate "))
-# for i in range(nb): #still working on input
 training_input = []
 label = []
 for i in range(nb):
@@ -67,7 +66,9 @@ def training():
 
 def Neural_network():
     weight,bias = training()
-    data = float(input("please enter your data point that you want to determine"))
+    data = np.zero(20)
+    data[0]= float(input("please enter your data point that you want to determine,first dimension"))
+    data[1] = float(input("please enter your data point that you want to determine,second dimension"))
     output = forward(data,weight,bias)
     print("output is",output)
 
